@@ -8,7 +8,6 @@ import { Intel } from "./pages/intel/Intel";
 import { PcArmada } from "./pages/pcarmada/PcArmada";
 import { Productos } from "./pages/productos/Productos";
 
-
 function App() {
   return (
     <>
@@ -21,7 +20,6 @@ function App() {
         <Route path="PcArmada" element={<PcArmada />}></Route>
       </Routes>
     </>
-  
   );
 }
 
