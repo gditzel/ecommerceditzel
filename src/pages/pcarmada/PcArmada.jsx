@@ -1,11 +1,11 @@
-import { Items } from "../../components/items/Items";
+import ItemListContainer from "../../components/itemListContainer/ItemListContainer";
 
-export function PcArmada(){
-    return (
-        <>
-        <div>
-            <Items></Items>
-        </div>
-        </>
-    )
+export function PcArmada() {
+  return (
+    <>
+      <div>
+        <ItemListContainer></ItemListContainer>
+      </div>
+    </>
+  );
 }

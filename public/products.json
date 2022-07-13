@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "name": "PC AMD Ryzen 5 3600-16Gb-GTX1650",
+    "image":
+        "./assets/images/pc.webp",
+    "imageAlt": "PC Gamer AMD",
+    "price": "170.000",
+    "desc": "Motherboard Asus Prime A320M-K • Procesador Amd Ryzen 5 3600 4.2 Ghz AM4 • Placa de video Radeon RX580-8G • Memoria Ram DDR4-8Gb 2666 Mhz Crucial",
+    "stock": 1
+},
+{
+    "id": 2,
+    "name": "PC Intel i7 12gen-16Gb-RTX3090",
+    "image":
+        "./assets/images/pc2.jpg",
+    "imageAlt": "PC Gamer Intel",
+    "price": "450.000",
+    "desc": "Motherboard Asus Rog B365-F • Procesador Intel i7 12gen 5.6 Ghz • Placa de video Nvidia RTX 3090-22GB • Memoria Ram DDR5-16Gb 3600 Mhz Kingston",
+    "stock": 2
+}]
+  
