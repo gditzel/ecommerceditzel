@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ItemCard from "../items/ItemCard";
 
-export function ItemCount({ stock, initial }) {
-  const [contador, actualizarContador] = useState(parseInt(initial));
+export function ItemCount({ stock, initial, onAdd }) {
+  const [contador, actualizarContador] = useState(initial);
 
   const HayStock = () => {
     return <p className="fs-8 fw-light">{stock} unidades disponibles</p>;
@@ -31,17 +31,8 @@ export function ItemCount({ stock, initial }) {
     }
   };
 
-  function OnAdd() {
-    if (parseInt(stock) !== 0) {
-      alert(`Items agregados al carrito: ${contador}`);
-      actualizarContador(parseInt(initial));
-    } else {
-      alert(`Stock no disponible`);
-    }
-  }
-
-  const Total = () => {
-    let total = 150000 * contador;
+  const Total = (param) => {
+    let total = param * contador;
     console.log(total);
     return `El total es: $${total}`;
   };
@@ -51,11 +42,11 @@ export function ItemCount({ stock, initial }) {
       <ItemCard
         text={<DisponibilidadStock />}
         precio="150000"
-        total={<Total />}
+        total={Total(150000)}
         disminuir={Disminuir}
         contador={contador}
         aumentar={Aumentar}
-        add={OnAdd}
+        add={() => onAdd(contador, actualizarContador)}
       ></ItemCard>
     </>
   );

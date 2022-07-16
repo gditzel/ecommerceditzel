@@ -3,9 +3,7 @@ import Item from "./Item";
 
 const ItemList = ({ items }) => {
   return (
-    <div
-      style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
-    >
+    <div className="flex justify-center flex-wrap">
       {items.map((item) => (
         <Item item={item} key={item.id} />
       ))}
