@@ -1,7 +1,7 @@
 export function Productos() {
   return (
     <>
-      <div>Página Productos</div>
+      <div className="h-screen">Página Productos</div>
     </>
   );
 }

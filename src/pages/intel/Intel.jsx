@@ -1,7 +1,7 @@
 export function Intel() {
   return (
     <>
-      <div>Página Intel</div>
+      <div className="h-screen">Página Intel</div>
     </>
   );
 }

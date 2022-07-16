@@ -1,10 +1,10 @@
-import ItemListContainer from "../../components/itemListContainer/ItemListContainer";
+import { Filter } from "../../components/filters/Filter";
 
 export function PcArmada() {
   return (
     <>
-      <div>
-        <ItemListContainer></ItemListContainer>
+      <div className="h-screen">
+        <Filter/>
       </div>
     </>
   );

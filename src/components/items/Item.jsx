@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ item }) => {
   const { name, price, stock, image, desc, imageAlt } = item;
   return (
@@ -9,9 +11,11 @@ const Item = ({ item }) => {
         <div>${price}</div>
         <div>Stock: {stock}</div>
       </div>
-      <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-40 mx-auto">
-        Ver Detalle
-      </button>
+      <Link to={`/Producto/${item.id}`}>
+        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-40 mx-auto">
+          Ver Detalle 
+        </button>
+      </Link>
     </div>
   );
 };

@@ -5,7 +5,7 @@ export function Home() {
 
   return (
     <>
-      <div className="text-center">
+      <div className="text-center h-screen">
         <ItemListContainer saludo={saludo} />
       </div>
     </>

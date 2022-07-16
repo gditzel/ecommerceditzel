@@ -16,7 +16,7 @@ const ItemListContainer = ({ saludo }) => {
         .then((res) => res.json())
         .then((res) => setItems(res))
         .finally(() => setLoading(false));
-    }, 2000);
+    }, 1000);
   }, []);
 
   function OnAdd(contador, actualizarContador) {
