@@ -1,7 +1,7 @@
 export function Amd() {
   return (
     <>
-      <div>Página AMD</div>
+      <div className="h-screen">Página AMD</div>
     </>
   );
 }

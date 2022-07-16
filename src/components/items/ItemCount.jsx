@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemCard from "../items/ItemCard";
+import ItemList from "./ItemList";
 
 export function ItemCount({ stock, initial }) {
   const [contador, actualizarContador] = useState(parseInt(initial));
@@ -40,8 +41,8 @@ export function ItemCount({ stock, initial }) {
     }
   }
 
-  const Total = () => {
-    let total = 150000 * contador;
+  const Total = (param) => {
+    let total = param * contador;
     console.log(total);
     return `El total es: $${total}`;
   };
@@ -51,7 +52,7 @@ export function ItemCount({ stock, initial }) {
       <ItemCard
         text={<DisponibilidadStock />}
         precio="150000"
-        total={<Total />}
+        total={Total(150000)}
         disminuir={Disminuir}
         contador={contador}
         aumentar={Aumentar}
