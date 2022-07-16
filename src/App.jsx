@@ -10,8 +10,9 @@ import { PcArmada } from "./pages/pcarmada/PcArmada";
 import { Productos } from "./pages/productos/Productos";
 import { Footer } from "./components/footer/Footer";
 
-const ItemDetailContainer = lazy(()=> import("./components/itemDetailContainer/ItemDetailContainer"))
-
+const ItemDetailContainer = lazy(() =>
+  import("./components/itemDetailContainer/ItemDetailContainer")
+);
 
 function App() {
   return (
@@ -23,14 +24,16 @@ function App() {
         <Route path="Amd" element={<Amd />}></Route>
         <Route path="Intel" element={<Intel />}></Route>
         <Route path="PcArmada" element={<PcArmada />}></Route>
-        <Route path="Producto/:idProduct" element={
-          <Suspense fallback={<di>Cargando...</di>}>
-            <ItemDetailContainer/>
-          </Suspense>
-        }>
-        </Route>
+        <Route
+          path="Producto/:idProduct"
+          element={
+            <Suspense fallback={<div>Cargando...</div>}>
+              <ItemDetailContainer />
+            </Suspense>
+          }
+        ></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

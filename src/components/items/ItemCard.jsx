@@ -1,5 +1,5 @@
 import React from "react";
-import PC from "../../assets/pc.webp";
+import PC from "../../assets/image/pc.webp";
 
 const ItemCard = (props) => {
   return (
