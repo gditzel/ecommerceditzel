@@ -63,12 +63,9 @@ export function Navbar() {
                     </li>
 
                     <li>
-                      <Link
-                        to="/"
-                        className="text-green-300 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium"
-                      >
+                      <span className="text-green-300 hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-2xl font-medium">
                         <BtnDropdown></BtnDropdown>
-                      </Link>
+                      </span>
                     </li>
 
                     <li>

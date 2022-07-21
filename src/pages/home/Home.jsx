@@ -1,12 +1,12 @@
-import ItemListContainer from "../../components/itemListContainer/ItemListContainer";
+import Carousel from "../../components/carousel/Carousel";
 
 export function Home() {
-  let saludo = "Hola soy la página Home";
+  const images = ["banner.jpg", "banner2.jpg", "banner3.webp"];
 
   return (
     <>
-      <div className="text-center">
-        <ItemListContainer saludo={saludo} />
+      <div className="text-center h-screen">
+        <Carousel images={images} />
       </div>
     </>
   );

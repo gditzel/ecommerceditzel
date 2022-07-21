@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ItemCard from "../items/ItemCard";
 
 export function ItemCount({ stock, initial, onAdd }) {
   const [contador, actualizarContador] = useState(initial);
@@ -31,23 +30,20 @@ export function ItemCount({ stock, initial, onAdd }) {
     }
   };
 
-  const Total = (param) => {
-    let total = param * contador;
-    console.log(total);
-    return `El total es: $${total}`;
-  };
-
   return (
     <>
-      <ItemCard
-        text={<DisponibilidadStock />}
-        precio="150000"
-        total={Total(150000)}
-        disminuir={Disminuir}
-        contador={contador}
-        aumentar={Aumentar}
-        add={() => onAdd(contador, actualizarContador)}
-      ></ItemCard>
+      {<DisponibilidadStock />}
+      <div className="flex justify-around items-center mx-auto my-auto h-7 border-dashed border-2 border-indigo-600 w-36">
+        <button onClick={Disminuir}>-</button>
+        <div>{contador}</div>
+        <button onClick={Aumentar}>+</button>
+      </div>
+      <button
+        onClick={() => onAdd(contador, actualizarContador)}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-56 mx-auto"
+      >
+        Agregar al carrito
+      </button>
     </>
   );
 }

@@ -22,11 +22,9 @@ const ItemDetailContainer = () => {
     }
   }, [idProduct]);
 
-  console.log(items);
-
   return (
     <>
-      <div className="text-center my-24">
+      <div className="text-center h-96 my-24">
         {loading ? <Spinner /> : <ItemDetail items={items} />}
       </div>
     </>

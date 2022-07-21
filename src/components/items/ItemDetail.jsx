@@ -1,9 +1,20 @@
 import React from "react";
+import { ItemCount } from "../items/ItemCount";
 
 const ItemDetail = ({ items }) => {
-  const { name, price, stock, image, desc, imageAlt } = items[0];
+  const { name, price, image, desc, imageAlt } = items[0];
+  const initialCount = 1;
+  const stockCount = 5;
 
-  console.log(items);
+  function OnAdd(contador, actualizarContador) {
+    if (stockCount !== 0) {
+      alert(`Items agregados al carrito: ${contador}`);
+      actualizarContador(initialCount);
+    } else {
+      alert(`Stock no disponible`);
+    }
+  }
+
   return (
     <>
       <div className="mx-36 flex gap-5 shadow-xl p-8">
@@ -15,11 +26,12 @@ const ItemDetail = ({ items }) => {
           <div className="text-gray-400 text-xl">{desc}</div>
           <div className="flex justify-center gap-5 text-xl">
             <div>${price}</div>
-            <div>Stock: {stock}</div>
           </div>
-          <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-auto h-14">
-            Agregar al carrito
-          </button>
+          <ItemCount
+            stock={stockCount}
+            initial={initialCount}
+            onAdd={OnAdd}
+          ></ItemCount>
         </div>
       </div>
     </>
